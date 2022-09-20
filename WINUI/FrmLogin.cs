@@ -121,7 +121,9 @@ namespace WINUI
                     {
                         if (item.BaseUserName == this.用户名.Text)
                         {
-
+                            automatics.Add(uSER2);
+                            break;
+                        }
                         }
                         else
                         {
