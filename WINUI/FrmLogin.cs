@@ -100,6 +100,7 @@ namespace WINUI
                 MyProperty = this.checkEdit2.Checked
 
             };
+            try
             {
                 Program.Automatic = new BaseUserManager().UserLogin(uSER);
                 if (Program.Automatic is null)
@@ -122,8 +123,12 @@ namespace WINUI
                         {
 
                         }
+                        else
+                        {
+                            serializeObject.eotl("User.obj", automatics); //序列化到本地 
+                        }
                     }
-                    serializeObject.eotl("User.obj", automatics); //序列化到本地 
+                    
                 }
                 this.DialogResult = DialogResult.OK;
             }
